@@ -1,0 +1,25 @@
+{
+"manifest_version": 2,
+
+"name": "RMP Scraper",
+"version": "1.0",
+
+"permissions": 
+	["tabs", "<all_urls>"],
+
+
+"browser_action": {
+	"default_icon": "icon.png",
+	"default_popup": "popup.html"
+},
+
+"content_scripts": [
+	{
+	"matches": [
+		"https://webapp4.asu.edu/catalog/*"
+	],
+	"js": ["jquery-3.1.1.js", "getPageHtml.js"],
+	"run_at": "document_end"
+	}
+]
+}
