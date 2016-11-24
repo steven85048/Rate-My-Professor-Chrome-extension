@@ -105,8 +105,8 @@ function performRMPRequest(professorName, aUniversity, response, callback){
 var options = {
 	key: fs.readFileSync('key.pem'),
 	cert: fs.readFileSync('cert.pem'),
-	passphrase: "terry987"
+	passphrase: ""
 };
 
-console.log("App listening on 10.140.222.29:8000");
-https.createServer(options, app).listen('8000', '10.140.222.34' );
+console.log("App listening on ");
+https.createServer(options, app).listen('8000', '' );
